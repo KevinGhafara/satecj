@@ -1,7 +1,7 @@
 :root {
   --primary: #c20a0a;
   --secondary: #ff9100;
-  --bg: #000;
+  --bg: #010101;
 }
 
 * {
@@ -72,6 +72,40 @@ body {
   display: none;
 }
 
+/* Navbar Search Form */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 30rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--bg);
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg);
+}
+
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -127,12 +161,14 @@ body {
 /* About Section */
 .about,
 .menu,
+.products,
 .contact {
   padding: 7.5rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
+.products h2,
 .contact h2 {
   text-align: center;
   font-size: 2.5rem;
@@ -141,6 +177,7 @@ body {
 
 .about h2 span,
 .menu h2 span,
+.products h2 span,
 .contact h2 span {
   color: var(--secondary);
 }
@@ -177,16 +214,18 @@ body {
 
 /* Menu Section */
 .menu h2,
+.products h2,
 .contact h2 {
   margin-bottom: 1rem;
 }
 
 .menu p,
+.products p,
 .contact p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.6;
 }
 
@@ -348,6 +387,11 @@ footer .credit a {
     margin: 1.5rem;
     padding: 0.5rem;
     font-size: 2rem;
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
   }
 
   .about .row {
