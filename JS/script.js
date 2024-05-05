@@ -5,10 +5,6 @@ document.querySelector("#hamburger-menu").onclick = () => {
   NavbarNav.classList.toggle("active");
 };
 
-// Klik diluar element
-const hm = document.querySelector("#hamburger-menu");
-const sb = document.querySelector("#search-button");
-
 // Toggle class active search form
 const searchForm = document.querySelector(".search-form");
 const searchBox = document.querySelector("#search-box");
@@ -18,6 +14,10 @@ document.querySelector("#search-button").onclick = (e) => {
   searchBox.focus();
   e.preventDefault();
 };
+
+// Klik diluar element
+const hm = document.querySelector("#hamburger-menu");
+const sb = document.querySelector("#search-button");
 
 document.addEventListener("click", function (e) {
   if (!hm.contains(e.target) && !NavbarNav.contains(e.target)) {
